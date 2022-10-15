@@ -6,9 +6,9 @@ on:
       - main
 
 env:
-  REGISTRY: "registry.digitalocean.com/box-registry"
+  REGISTRY: "registry.digitalocean.com/sandbox-registry"
   IMAGE_NAME: "pocket-bot"
-  CONTAINER_NAME: "pocket-bot"
+  CONTAINER_NAME: "pocket"
 
 jobs:
   build_and_push:
@@ -43,9 +43,9 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSHKEY }}
-          envs: IMAGE_NAME,REGISTRY,GITHUB_SHA,CONTAINER_NAME
+          envs: IMAGE_NAME,REGISTRY,GITHUB_SHA,,CONTAINER_NAME
           script: |
-            # Login into Digital Ocean Registry 
+            # Login into Digital Ocean Registry
             docker login -u ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} -p ${{ secrets.DIGITALOCEAN_ACCESS_TOKEN }} $(echo $REGISTRY)
             # Stop running container
             docker stop $(echo $CONTAINER_NAME)
