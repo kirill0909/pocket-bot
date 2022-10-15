@@ -1,0 +1,17 @@
+db_file: "bot_db"
+
+bot_url: "https://t.me/pocket0909_bot"
+
+messages:
+  
+  responses:
+    start: "Hello! To save link in own pocket account, you should give permissions. For it pass to the link:%s"
+    already_authorized: "You are already authorized, send me link and I will save it"
+    saved_successfully: "Link was successfully saved"
+    unknown_command: "Invalid command"
+
+  errors:
+    default: "Something went wrong"
+    invalid_url: "Invalid link"
+    unauthorized: "You are not authorized. You should to use command: /start"
+    unable_to_save: "Failed to save link. Try again later"

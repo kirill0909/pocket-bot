@@ -1,0 +1,6 @@
+plane
+consumer_key
+bot_key
+.env
+.bin
+*.db
