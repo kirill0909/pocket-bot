@@ -6,7 +6,7 @@ on:
       - main
 
 env:
-  REGISTRY: "registry.digitalocean.com/sandbox-registry"
+  REGISTRY: "registry.digitalocean.com/box-registry"
   IMAGE_NAME: "pocket-bot"
   CONTAINER_NAME: "pocket"
 
