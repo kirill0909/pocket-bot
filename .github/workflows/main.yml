@@ -51,7 +51,7 @@ jobs:
             docker stop $(echo $CONTAINER_NAME)
             # Remove old container
             docker rm $(echo $CONTAINER_NAME)
-            # Set env variables
+            # Set env  variables
             export TOKEN=${{ secrets.TELEGRAM_TOKEN }}
             export CONSUMER_KEY=${{ secrets.POCKET_CONSUMER_KEY }}
             export AUTH_SERVER_URL=${{ secrets.AUTH_SERVER_URL }}
